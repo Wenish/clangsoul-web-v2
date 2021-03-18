@@ -13,7 +13,6 @@ export default {
                     const release = doc.data()
                     obj[releaseId] = release
                 });
-                console.log(obj)
                 resolve(obj);
             });
         })
