@@ -5,9 +5,9 @@
 
 <script>
 import HeaderNavbar from '@/components/HeaderNavbar.vue'
-import apiReleases from '@/api/apiReleases'
+import api from '@/api'
 
-apiReleases.getReleases();
+api.releases.get();
 
 export default {
   name: 'LayoutBasic',
