@@ -7,7 +7,6 @@ export default {
         return new Promise((resolve, reject) => {
             let obj = {}
             firestore.collection("releases").get().then((querySnapshot) => {
-                console.log(querySnapshot)
                 querySnapshot.forEach((doc) => {
                     const releaseId = doc.id
                     const release = doc.data()
