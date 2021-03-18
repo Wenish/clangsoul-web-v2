@@ -6,7 +6,7 @@
             <router-link to="/sample-packs">Sample Packs</router-link>
         </div>
         <div class="right">
-            <img class="avatar" width="48" height="48" alt="avatar" src="../assets/avatar.png">
+            <div class="avatar"></div>
         </div>
     </div>
 </template>
@@ -20,10 +20,13 @@ export default {
 <style scoped lang="stylus">
 @require '../css/variables.styl'
 
+
+
+
 .grid-container {
     display: grid;
-    grid-template-columns: 48px 1fr 48px;
-    grid-template-rows: 48px;
+    grid-template-columns: $headerNavbarHeight 1fr $headerNavbarHeight;
+    grid-template-rows: $headerNavbarHeight;
     gap: 0px 0px;
     grid-template-areas:"left middle right";
     background-color $color2
@@ -44,7 +47,11 @@ export default {
 }
 
 .avatar {
-    cursor pointer
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background-image: url('~@/assets/avatar.png');
+    background-size: cover;
 }
 
 .avatar:hover {
