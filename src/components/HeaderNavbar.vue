@@ -5,7 +5,9 @@
             <router-link to="/">Home</router-link> |
             <router-link to="/sample-packs">Sample Packs</router-link>
         </div>
-        <div class="right"></div>
+        <div class="right">
+            <img class="avatar" width="48" height="48" alt="avatar" src="../assets/avatar.png">
+        </div>
     </div>
 </template>
 
@@ -25,12 +27,28 @@ export default {
     gap: 0px 0px;
     grid-template-areas:"left middle right";
     background-color $color2
+    border-bottom: 1px rgba($color1, 0.3) solid;
 }
 
-.left { grid-area: left; }
+.left {
+    grid-area: left;
+}
 
-.middle { grid-area: middle; }
+.middle {
+    grid-area: middle;
+}
 
-.right { grid-area: right; }
+.right {
+    grid-area: right;
+    box-shadow: -1px 0px 3px 0px #0003;
+}
+
+.avatar {
+    cursor pointer
+}
+
+.avatar:hover {
+    filter: grayscale(30%) contrast(110%);
+}
 
 </style>
