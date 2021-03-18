@@ -1,6 +1,8 @@
 <template>
   <StreamLinks />
-  <ReleasesList />
+  <div class="container-releases">
+    <ReleasesList />
+  </div>
 </template>
 
 <script>
@@ -16,3 +18,10 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.container-releases {
+  max-width 700px
+  margin auto
+}
+</style>

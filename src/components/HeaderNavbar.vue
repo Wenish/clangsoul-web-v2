@@ -6,7 +6,7 @@
             <router-link to="/sample-packs">Sample Packs</router-link>
         </div>
         <div class="right">
-            <div class="avatar"></div>
+            <!-- <div class="avatar"></div> -->
         </div>
     </div>
 </template>
@@ -31,6 +31,7 @@ export default {
     grid-template-areas:"left middle right";
     background-color $color2
     border-bottom: 1px rgba($color1, 0.3) solid;
+    line-height $headerNavbarHeight
 }
 
 .left {
@@ -43,10 +44,10 @@ export default {
 
 .right {
     grid-area: right;
-    box-shadow: -1px 0px 3px 0px #0003;
 }
 
 .avatar {
+    box-shadow: -1px 0px 3px 0px #0003;
     cursor: pointer;
     height: 100%;
     width: 100%;

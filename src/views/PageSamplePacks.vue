@@ -1,5 +1,5 @@
 <template>
-    <h1>Page Sample Packs</h1>
+    <h1>Sample Packs work in progress...</h1>
 </template>
 
 <script>
