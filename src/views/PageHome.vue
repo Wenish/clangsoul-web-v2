@@ -2,6 +2,7 @@
   <StreamLinks />
   <div class="container-releases">
     <ReleasesList />
+    just vibe
   </div>
 </template>
 
