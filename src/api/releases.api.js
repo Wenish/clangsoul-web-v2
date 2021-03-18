@@ -1,5 +1,5 @@
   
-import firebase from 'firebase'
+import firebase from 'firebase/app'
 const firestore = firebase.firestore()
 
 export default {

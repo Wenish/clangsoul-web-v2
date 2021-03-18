@@ -50,12 +50,13 @@ export default {
     cursor: pointer;
     height: 100%;
     width: 100%;
-    background-image: url('~@/assets/avatar.png');
+    background-image: url('~@/assets/avatar2.png');
     background-size: cover;
+    filter: grayscale(20%) contrast(105%);
 }
 
 .avatar:hover {
-    filter: grayscale(30%) contrast(110%);
+    filter: none;
 }
 
 </style>
