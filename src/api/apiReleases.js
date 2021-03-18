@@ -5,7 +5,7 @@ const firestore = firebase.firestore()
 export default {
     getReleases() {
         return new Promise((resolve, reject) => {
-            var obj = {}
+            let obj = {}
             firestore.collection("releases").get().then((querySnapshot) => {
                 console.log(querySnapshot)
                 querySnapshot.forEach((doc) => {
