@@ -1,13 +1,18 @@
 <template>
-    <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
-    </div>
+  <HeaderNavbar />
     <router-view />
 </template>
 
 <script>
+import HeaderNavbar from '@/components/HeaderNavbar.vue'
+import apiReleases from '@/api/apiReleases'
+
+apiReleases.getReleases();
+
 export default {
-  name: 'LayoutBasic'
+  name: 'LayoutBasic',
+  components: {
+    HeaderNavbar
+  }
 }
 </script>
