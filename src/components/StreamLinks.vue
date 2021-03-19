@@ -1,8 +1,9 @@
 <template>
   <div class="container">
       <div class="item" v-for="item in items" :key="item.text">
-          <div v-is="item.icon" size="34"></div>
-          <a :href="item.link" target="_blank">{{item.text}}</a>
+        <a class="button-icon" :href="item.link" target="_blank">
+          <div v-is="item.icon" size="40"></div>
+        </a>
       </div>
   </div>
 </template>
@@ -69,6 +70,8 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+@require '~@/css/variables.styl'
+
 .container {
     display: flex;
     align-items: center;
@@ -79,5 +82,17 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.button-icon {
+  background-color $color1
+  border-radius 50%
+  height: 56px;
+  width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-icon:hover {
+  background-color $color2
 }
 </style>
