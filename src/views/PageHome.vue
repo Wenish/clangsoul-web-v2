@@ -22,7 +22,7 @@ export default {
 
 <style lang="stylus" scoped>
 .container-releases {
-  max-width 700px
+  max-width: 450px;
   margin auto
 }
 </style>

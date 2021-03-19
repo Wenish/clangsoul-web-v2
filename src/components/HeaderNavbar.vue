@@ -18,10 +18,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@require '../css/variables.styl'
-
-
-
+@require '~@/css/variables.styl'
 
 .grid-container {
     display: grid;

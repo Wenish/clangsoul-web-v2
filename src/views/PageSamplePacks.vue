@@ -10,5 +10,4 @@ export default {
 
 
 <style lang="stylus" scoped>
-@require '../css/variables.styl'
 </style>
