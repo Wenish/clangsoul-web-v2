@@ -4,6 +4,7 @@
     <router-view />
   </div>
   <FloatingBackground />
+  <img class="mountains" src="@/assets/mountains.png" />
 </template>
 
 <script>
@@ -22,5 +23,14 @@ export default {
 <style lang="stylus" scoped>
 .content {
   padding 20px
+}
+
+.mountains {
+  position: fixed;
+  bottom: -12vh;
+  left: 0;
+  width: 100%;
+  z-index: -2;
+  filter: sepia(0.8);
 }
 </style>
