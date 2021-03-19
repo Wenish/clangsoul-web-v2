@@ -1,6 +1,21 @@
 <template>
     <div class="grid-container">
-        <div class="left"></div>
+        <div class="left">
+            <div class="link-list">
+                <a class="link-youtube" v-if="linkYoutube" :href="linkYoutube" target="_blank">
+                    <IconYoutube size="36" />
+                </a>
+                <a class="link-soundcloud" v-if="linkSoundcloud" :href="linkSoundcloud" target="_blank">
+                    <IconSoundcloud size="36" />
+                </a>
+                <a class="link-apple" v-if="linkAppleMusic" :href="linkAppleMusic" target="_blank">
+                    <IconApple size="36" />
+                </a>
+                <a class="link-spotify" v-if="linkSpotify" :href="linkSpotify" target="_blank">
+                    <IconSpotify size="36" />
+                </a>
+            </div>
+        </div>
         <div class="right">
             <div class="item-background" :style="{ background: `url('https://source.unsplash.com/500x300/?nature,water,${Math.floor(Math.random() * 500) + 1}') center center / cover no-repeat` }"></div>
             <div class="item-content">
@@ -20,10 +35,18 @@
 </template>
 
 <script>
+import IconApple from '@/components/IconApple'
+import IconSoundcloud from '@/components/IconSoundcloud'
+import IconSpotify from '@/components/IconSpotify'
+import IconYoutube from '@/components/IconYoutube'
 
 export default {
   name: 'ReleasesListItem',
   components: {
+      IconApple,
+      IconSoundcloud,
+      IconSpotify,
+      IconYoutube
   },
   props: [
     'title',
@@ -60,6 +83,38 @@ export default {
     grid-area: right;
     position relative
     background: $color2;
+}
+
+.link-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.link-list > a {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-list > a:hover {
+    background-color $color2
+}
+
+.link-youtube {
+    border-bottom: 1px solid #d32f2f;
+}
+
+.link-soundcloud {
+    border-bottom: 1px solid #bd6205;;
+}
+
+.link-apple {
+    border-bottom: 1px solid #757575;
+}
+
+.link-spotify {
+    border-bottom: 1px solid #00796b;
 }
 
 .item-background {
