@@ -3,15 +3,18 @@
   <div class="content">
     <router-view />
   </div>
+  <FloatingBackground />
 </template>
 
 <script>
 import HeaderNavbar from '@/components/HeaderNavbar.vue'
+import FloatingBackground from '@/components/FloatingBackground'
 
 export default {
   name: 'LayoutBasic',
   components: {
-    HeaderNavbar
+    HeaderNavbar,
+    FloatingBackground
   }
 }
 </script>
