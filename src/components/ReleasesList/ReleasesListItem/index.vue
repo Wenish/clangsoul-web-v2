@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="right">
-            <div class="item-background" :style="{ background: `url('https://source.unsplash.com/500x300/?nature,water,${Math.floor(Math.random() * 500) + 1}') center center / cover no-repeat` }"></div>
+            <div class="item-background" :style="{ background: `url('https://source.unsplash.com/500x300/?nature,water,fire,${Math.floor(Math.random() * 500) + 1}') center center / cover no-repeat` }"></div>
             <div class="item-content">
                 <!--
                 <div class="links">
