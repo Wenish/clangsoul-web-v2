@@ -1,5 +1,7 @@
 <template>
+  <!--
   <HeaderNavbar />
+  -->
   <div class="content">
     <router-view />
   </div>

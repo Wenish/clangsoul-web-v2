@@ -93,6 +93,6 @@ export default {
   justify-content: center;
 }
 .button-icon:hover {
-  background-color $color2
+  background-color rgba($color1, 0.8)
 }
 </style>

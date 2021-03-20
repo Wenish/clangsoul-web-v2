@@ -98,7 +98,7 @@ export default {
 }
 
 .link-list > a:hover {
-    background-color $color2
+    background-color rgba(($color1), 0.2)
 }
 
 .link-youtube {
