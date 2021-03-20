@@ -4,7 +4,7 @@
     <router-view />
   </div>
   <FloatingBackground />
-  <img class="mountains" src="@/assets/mountains.png" />
+  <div class="mountains" src="@/assets/landscape.svg"></div>
 </template>
 
 <script>
@@ -26,11 +26,13 @@ export default {
 }
 
 .mountains {
-  position: fixed;
-  bottom: -12vh;
-  left: 0;
-  width: 100%;
-  z-index: -2;
-  filter: sepia(0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1000000;
+    background-size: cover;
+    background-image url('~@/assets/landscape.svg');
 }
 </style>
