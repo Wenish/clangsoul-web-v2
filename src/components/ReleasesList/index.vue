@@ -1,4 +1,5 @@
 <template>
+  <Loader v-if="isLoading" />
   <div class="grid-container-releases">
     <ReleasesListItem
       v-for="obj in releases"
@@ -15,20 +16,24 @@
 
 <script>
 import ReleasesListItem from './ReleasesListItem'
+import Loader from '@/components/Loader'
 import api from '@/api'
 
 export default {
   name: 'ReleasesList',
   components: {
-    ReleasesListItem
+    ReleasesListItem,
+    Loader
   },
   data: function () {
     return {
+      isLoading: true,
       releases: {}
     }
   },
   async mounted() {
     this.releases = await api.releases.get();
+    this.isLoading = false;
   }
 }
 </script>
