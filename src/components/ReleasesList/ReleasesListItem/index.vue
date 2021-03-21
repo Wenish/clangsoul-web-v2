@@ -30,6 +30,7 @@
                 <div class="artist-name">{{artist}}</div>
                 <div class="title">{{title}}</div>
             </div>
+            <VinylLayer />
         </div>
     </div>
 </template>
@@ -39,6 +40,7 @@ import IconApple from '@/components/IconApple'
 import IconSoundcloud from '@/components/IconSoundcloud'
 import IconSpotify from '@/components/IconSpotify'
 import IconYoutube from '@/components/IconYoutube'
+import VinylLayer from './VinylLayer'
 
 export default {
   name: 'ReleasesListItem',
@@ -46,7 +48,8 @@ export default {
       IconApple,
       IconSoundcloud,
       IconSpotify,
-      IconYoutube
+      IconYoutube,
+      VinylLayer
   },
   props: [
     'title',
@@ -127,6 +130,8 @@ export default {
 }
 
 .item-content {
+    z-index: 15;
+    pointer-events: none;
     position relative;
     background: linear-gradient(45deg,rgba(0,0,0,.8),hsla(0,0%,89.8%,0));
     height: 100%;
