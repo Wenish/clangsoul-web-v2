@@ -29,7 +29,6 @@ export default {
   },
   async mounted() {
     this.releases = await api.releases.get();
-    console.log('releases', this.releases)
   }
 }
 </script>
