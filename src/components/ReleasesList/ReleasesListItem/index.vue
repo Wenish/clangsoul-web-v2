@@ -170,7 +170,7 @@ export default {
     background-position: center;
     background-image none;
     opacity: 0;
-    transition: all  1.5s linear;
+    transition: all  0.25s linear;
     pointer-events: none;
     animation:spinForward 12s linear infinite;
     animation-play-state: paused;
