@@ -36,5 +36,6 @@ export default {
     z-index: -1000000;
     background-size: cover;
     background-image url('~@/assets/landscape.svg');
+    opacity 0.2
 }
 </style>
