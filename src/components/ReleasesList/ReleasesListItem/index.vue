@@ -76,6 +76,7 @@ export default {
     gap: 0px 0px;
     grid-template-areas:
         "left right";
+    animation fadeIn 2s ease
 }
 .left {
     grid-area: left;
