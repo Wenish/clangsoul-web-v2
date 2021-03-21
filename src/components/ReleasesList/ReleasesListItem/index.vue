@@ -170,13 +170,14 @@ export default {
     background-position: center;
     background-image none;
     opacity: 0;
-    transition: opacity  1.5s linear;
+    transition: all  1.5s linear;
     pointer-events: none;
+    animation:spinForward 12s linear infinite;
+    animation-play-state: paused;
+    background-image: url('~@/assets/vinylRecord.svg');
 }
 
 .right:hover > .layer-vinyl 
     opacity: 0.3;
-    animation:spin 12s linear infinite;
-    background-image: url('~@/assets/vinylRecord.svg');
-
+    animation-play-state: running;
 </style>
