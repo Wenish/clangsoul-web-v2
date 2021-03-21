@@ -1,5 +1,5 @@
 <template>
-    <div class="grid-container-releases-item">
+    <div v-if="show" class="grid-container-releases-item">
         <div class="left">
             <div class="link-list">
                 <a class="link-youtube" v-if="linkYoutube" :href="linkYoutube" target="_blank">
@@ -30,7 +30,7 @@
                 <div class="artist-name">{{artist}}</div>
                 <div class="title">{{title}}</div>
             </div>
-            <VinylLayer />
+            <div class="layer-vinyl"></div>
         </div>
     </div>
 </template>
@@ -40,7 +40,6 @@ import IconApple from '@/components/IconApple'
 import IconSoundcloud from '@/components/IconSoundcloud'
 import IconSpotify from '@/components/IconSpotify'
 import IconYoutube from '@/components/IconYoutube'
-import VinylLayer from './VinylLayer'
 
 export default {
   name: 'ReleasesListItem',
@@ -48,10 +47,10 @@ export default {
       IconApple,
       IconSoundcloud,
       IconSpotify,
-      IconYoutube,
-      VinylLayer
+      IconYoutube
   },
   props: [
+    'show',
     'title',
     'artist',
     'linkYoutube',
@@ -82,6 +81,7 @@ export default {
     grid-area: left;
     background #131313
     border-right: 1px solid #ffffff36;
+    z-index 15
 }
 .right {
     grid-area: right;
@@ -132,7 +132,6 @@ export default {
 
 .item-content {
     z-index: 15;
-    pointer-events: none;
     position relative;
     background: linear-gradient(45deg,rgba(0,0,0,.8),hsla(0,0%,89.8%,0));
     height: 100%;
@@ -160,5 +159,24 @@ export default {
 .links > a {
     padding 5px
 }
+
+.layer-vinyl {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image none;
+    opacity: 0;
+    transition: opacity  1.5s linear;
+    pointer-events: none;
+}
+
+.right:hover > .layer-vinyl 
+    opacity: 0.3;
+    animation:spin 12s linear infinite;
+    background-image: url('~@/assets/vinylRecord.svg');
 
 </style>

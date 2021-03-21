@@ -4,6 +4,7 @@
     <ReleasesListItem
       v-for="obj in releases"
       :key="obj.title"
+      :show="obj.show"
       :title="obj.title"
       :artist="obj.artist"
       :linkYoutube="obj.linkYoutube"
@@ -31,9 +32,26 @@ export default {
       releases: {}
     }
   },
+  methods: {
+    delayedShow (obj, idx) {
+      const delay = 250 * idx
+      setTimeout(() => {
+        obj.show = true
+      }, delay)
+    }
+  },
   async mounted() {
-    this.releases = await api.releases.get();
+    const releases = await api.releases.get();
+    for (let releaseKey in releases) {
+      releases[releaseKey].show = false
+    }
     this.isLoading = false;
+    this.releases = releases;
+
+    Object.keys(this.releases).forEach((key, index) => {
+      const obj = this.releases[key]
+      this.delayedShow(obj, index)
+    });
   }
 }
 </script>
