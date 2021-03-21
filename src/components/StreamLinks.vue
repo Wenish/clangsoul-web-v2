@@ -2,7 +2,7 @@
   <div class="container">
       <div class="item" v-for="item in items" :key="item.text">
         <a class="button-icon" :href="item.link" target="_blank">
-          <div v-is="item.icon" size="40"></div>
+          <div v-is="item.icon" :size="iconSize"></div>
         </a>
       </div>
   </div>
@@ -25,6 +25,7 @@ export default {
       IconYoutube
     },
     data: () => ({
+        iconSize: 32,
         items: [
           {
             icon: 'IconInstagram',

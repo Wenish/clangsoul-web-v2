@@ -1,7 +1,7 @@
 <template>
   <StreamLinks />
-  <div class="container-releases">
-    <ReleasesList />
+  <ReleasesList />
+  <div>
     just vibe
   </div>
 </template>
@@ -21,8 +21,4 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.container-releases {
-  max-width: 450px;
-  margin auto
-}
 </style>

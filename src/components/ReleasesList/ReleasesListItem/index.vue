@@ -1,5 +1,5 @@
 <template>
-    <div class="grid-container">
+    <div class="grid-container-releases-item">
         <div class="left">
             <div class="link-list">
                 <a class="link-youtube" v-if="linkYoutube" :href="linkYoutube" target="_blank">
@@ -62,7 +62,7 @@ export default {
 <style scoped lang="stylus">
 @require '~@/css/variables.styl'
 
-.grid-container {
+.grid-container-releases-item {
     color: $color5
     // text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.56);
     margin: 10px;
@@ -114,7 +114,7 @@ export default {
 }
 
 .link-spotify {
-    border-bottom: 1px solid #00796b;
+    border-bottom: 1px solid #388e3c;
 }
 
 .item-background {
