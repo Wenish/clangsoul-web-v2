@@ -30,7 +30,7 @@
                 <div class="artist-name">{{artist}}</div>
                 <div class="title">{{title}}</div>
             </div>
-            <div class="layer-vinyl"></div>
+            <!--<div class="layer-vinyl"></div>-->
         </div>
     </div>
 </template>
