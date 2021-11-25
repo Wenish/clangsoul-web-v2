@@ -4,6 +4,7 @@
   -->
   <div class="content">
     <router-view />
+    <BaseFooter />
   </div>
   <FloatingBackground />
   <div class="mountains" src="@/assets/landscape.svg"></div>
@@ -12,12 +13,14 @@
 <script>
 import HeaderNavbar from '@/components/HeaderNavbar.vue'
 import FloatingBackground from '@/components/FloatingBackground'
+import BaseFooter from '@/components/BaseFooter.vue'
 
 export default {
   name: 'LayoutBasic',
   components: {
     HeaderNavbar,
-    FloatingBackground
+    FloatingBackground,
+    BaseFooter
   }
 }
 </script>
